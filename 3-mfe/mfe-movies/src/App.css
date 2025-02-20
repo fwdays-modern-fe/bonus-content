@@ -1,0 +1,45 @@
+.app {
+  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0 40px;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  margin: 0 auto;
+  align-items: start;
+  width: 100%;
+}
+
+.movies-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 30px;
+  max-width: 80%;
+}
+
+.watchlist-section {
+  width: 300px;
+  flex-shrink: 0;
+  min-width: 20%;
+  margin: 20px;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .watchlist-section {
+    width: 100%;
+  }
+}
